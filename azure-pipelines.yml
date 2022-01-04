@@ -1,5 +1,8 @@
 trigger:
 - '*'
+- task: NodeTool@0
+  inputs:
+  versionSpec: '14.x'
 
 pool:
   vmImage: 'ubuntu-20.04'
@@ -85,7 +88,3 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
-  
-- task: NodeTool@0
-  inputs:
-  versionSpec: '14.x'
