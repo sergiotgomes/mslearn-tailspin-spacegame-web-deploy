@@ -85,3 +85,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+  
+- task: NodeTool@0
+  inputs:
+  versionSpec: '14.x'
